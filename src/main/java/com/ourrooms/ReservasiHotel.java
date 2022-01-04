@@ -3,18 +3,14 @@ package com.ourrooms;
 import java.util.Scanner;
 
 public class ReservasiHotel {
-    // Deklarasi variabel global
     static String nama, NIK, kamar, menuBreakfast, notaPembayaran;
 
-    // Fungsi main
     public static void main(String[] args) {
-        // Deklarasi variabel lokal
         String hari, bulan, tahun, tanggalCheckIn, tanggalCheckOut;
         int jam, menit, tanggal, pilihUntukCekKamar, kamarYangDipilih, menuYangDipilih;
         boolean isBook;
         Scanner userInputInteger, userInputString;
 
-        // Inisiasi nilai awal
         userInputInteger = new Scanner(System.in);
         userInputString = new Scanner(System.in);
         isBook = false;
@@ -22,14 +18,12 @@ public class ReservasiHotel {
         kamar = "";
         menuBreakfast = "-";
 
-        // Cetak header hotel
         System.out.println("|-------------------------------------------------------------------|");
         System.out.println("|\t\t\t\tSELAMAT DATANG DI HOTEL JAHILLIYAH\t\t\t\t\t|");
         System.out.println("|\t\t\tJalan Karya No.33, Kabupaten Mesir, England\t\t\t\t|");
         System.out.println("|-------------------------------------------------------------------|");
         System.out.println("");
 
-        // Input tanggal check-in
         System.out.println("Silahkan Isi Tanggal Check In:");
         System.out.print("Masukkan jam (1-24)\t\t: ");
         jam = userInputInteger.nextInt();
@@ -49,13 +43,10 @@ public class ReservasiHotel {
         System.out.print("Masukkan Tahun\t\t\t: ");
         tahun = userInputString.nextLine();
 
-        // Format tanggal check-in
         tanggalCheckIn = formatTanggalCheckIn(jam, menit, hari, tanggal, bulan, tahun);
 
-        // Format tanggal check-out
         tanggalCheckOut = formatTanggalCheckOut(jam, menit, hari, tanggal+1, bulan, tahun);
 
-        // Perulangan untuk cek fasilitas kamar
         while(!isBook) {
             cetakPilihanKamar();
             System.out.print("Cek fasilitas kamar(1-5)\t\t: ");
@@ -64,7 +55,6 @@ public class ReservasiHotel {
             kamarYangDipilih = pilihUntukCekKamar;
         }
 
-        // Cetak dan pilih menu breakfast
         switch (kamarYangDipilih) {
             case 1:
             case 2:
@@ -76,20 +66,14 @@ public class ReservasiHotel {
                 break;
         }
 
-        // Panggil fungsi registrasi
         registrasi();
 
-        // Panggil fungsi cetak invoice
         cetakInvoice(nama, NIK, kamar, menuBreakfast, tanggalCheckIn, tanggalCheckOut, notaPembayaran);
     }
 
-    // Fungsi untuk format tanggal check-in
     public static String formatTanggalCheckIn(int jam, int menit, String hari, int tanggal, String bulan, String tahun) {
-        // Deklarasi variabel lokal
         String tanggalCheckIn;
 
-        // Untuk mengubah huruf awal hari menjadi huruf besar
-        // Menghindari kesalahan user dalam input nama hari sesuai kaidah kebahasaan
         switch (hari) {
             case "Senin":
             case "senin":
@@ -121,12 +105,8 @@ public class ReservasiHotel {
                 break;
         }
 
-        // Untuk mengubah huruf awal bulan menjadi huruf besar
-        // Menghindari kesalahan user dalam input nama bulan sesuai kaidah kebahasaan
         bulan = ubahCaseBulan(bulan);
 
-        // Melakukan formatting pada waktu, jika waktu kurang dari 10 dan menit kurang dari 10
-        // Maka ditambah dengan 0, misal 07:01
         if (jam < 10 && menit < 10) {
             tanggalCheckIn = hari + ", " + tanggal + " " + bulan + " " + tahun + " 0" + jam + ":0" + menit;
         } else {
@@ -136,17 +116,12 @@ public class ReservasiHotel {
         return tanggalCheckIn;
     }
 
-    // Fungsi untuk format tanggal check-in
     public static String formatTanggalCheckOut(int jam, int menit, String hari, int tanggal, String bulan, String tahun) {
-        // Deklarasi variabel lokal
         String tanggalCheckOut;
         String hariCheckOut;
 
-        // Inisiasi nilai awal
         hariCheckOut = "";
 
-        // Untuk mengubah huruf awal hari menjadi huruf besar
-        // Menghindari kesalahan user dalam input nama hari sesuai kaidah kebahasaan
         switch (hari) {
             case "Senin":
             case "senin":
@@ -178,12 +153,8 @@ public class ReservasiHotel {
                 break;
         }
 
-        // Untuk mengubah huruf awal bulan menjadi huruf besar
-        // Menghindari kesalahan user dalam input nama bulan sesuai kaidah kebahasaan
         bulan = ubahCaseBulan(bulan);
 
-        // Melakukan formatting pada waktu, jika waktu kurang dari 10 dan menit kurang dari 10
-        // Maka ditambah dengan 0, misal 07:01
         if (jam < 10 && menit < 10) {
             tanggalCheckOut = hariCheckOut + ", " + tanggal + " " + bulan + " " + tahun + " 0" + jam + ":0" + menit;
         } else {
@@ -193,7 +164,6 @@ public class ReservasiHotel {
         return tanggalCheckOut;
     }
 
-    // Cetak Pilihan Kamar
     public static void cetakPilihanKamar() {
         System.out.println();
         System.out.println("DAFTAR KAMAR");
@@ -204,17 +174,13 @@ public class ReservasiHotel {
         System.out.println("5. Suite Executive ");
     }
 
-    // Cek Fasilitas Kamar
     public static boolean cekFasilitasKamar(int pilihanKamar, boolean isBook) {
-        // Deklarasi variabel lokal
         char bookOrNo;
         Scanner userInputChar;
 
-        // Inisiasi nilai awal
         userInputChar = new Scanner(System.in);
         System.out.println();
 
-        // Cetak fasilitas kamar
         System.out.println("FASILITAS KAMAR");
         switch (pilihanKamar) {
             case 1:
@@ -334,7 +300,6 @@ public class ReservasiHotel {
                 System.out.println("Input tidak valid");
         }
 
-        // Input apakah user setuju dengan kamar yang dipilih atau tidak
         System.out.print("Book(y/n)\t: ");
         bookOrNo = userInputChar.next().charAt(0);
         if (bookOrNo == 'y') {
@@ -348,14 +313,11 @@ public class ReservasiHotel {
         return isBook;
     }
 
-    // Cetak dan Pilih Menu Breakfast
     public static int cetakDanPilihMenuBreakfast() {
-        // Deklarasi variabel lokal
         Scanner scanner = new Scanner(System.in);
         char pilihMenu;
         int menuYangDipilih;
 
-        // Cetak menu breakfast
         System.out.println();
         System.out.println("MENU BREAKFAST");
         System.out.println("1. Mixed Vegetables with Peanut Sauce Dressing");
@@ -367,12 +329,10 @@ public class ReservasiHotel {
         System.out.println("7. Rice Cooked in Coconut Milk");
         System.out.println("8. Crispy salty soy bean");
 
-        // Input breakfast yang dipilih user berdasarkan angka yang dipilih
         System.out.print("Masukkan Pilihan Menu (1..8)\t: ");
         pilihMenu = scanner.next().toUpperCase().charAt(0);
         menuYangDipilih = 0;
 
-        // Melakukan pemilihan dengan switch case, lalu menginput nilainya pada variabel `menuBreakfast`
         switch (pilihMenu) {
             case '1':
                 menuYangDipilih = 1;
@@ -413,7 +373,6 @@ public class ReservasiHotel {
         return menuYangDipilih;
     }
 
-    // Fungsi untuk registrasi
     public static void registrasi() {
         Scanner userInputString;
 
@@ -428,7 +387,6 @@ public class ReservasiHotel {
         NIK = userInputString.nextLine();
     }
 
-    // Fungsi untuk mencetak invoice
     public static void cetakInvoice(String nama, String NIK, String kamar, String menuBreakfast, String tanggalCheckIn, String tanggalCheckOut, String notaPembayaran) {
         System.out.println();
         System.out.println("|---------------------- NOTA PEMBAYARAN HOTEL ----------------------|");
@@ -446,9 +404,7 @@ public class ReservasiHotel {
 
     }
 
-    // Fungsi untuk mengubah huruf awal menjadi huruf besar
     public static String ubahCaseBulan(String bulan) {
-        // Untuk mengubah huruf awal bulan menjadi huruf besar
         switch (bulan) {
             case "Januari":
             case "januari":
