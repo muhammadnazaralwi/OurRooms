@@ -1,7 +1,7 @@
 # OurRooms App - Fitur Pemesanan
 ## BDD Specs
 
-### Story: Tamu yang ingin check-in
+### Story: Tamu yang hendak check-in
 
 ### Narrative #1
 
@@ -18,7 +18,7 @@
 
 ## Use Cases
 
-### Load Feed From Remote Use Case
+### Load Room List Use Case
 
 #### Data:
 - URL
@@ -41,7 +41,7 @@
 | Property      | Type                |
 |---------------|---------------------|
 | `id`          | `UUID`              |
-| `nama` | `String`  |
-| `deskripsi`    | `String`               |
+| `name` | `String`  |
+| `description`    | `String`               |
 | `breakfast_menu`    | `String`  (optional)|
 | `location`    | `String`  |
