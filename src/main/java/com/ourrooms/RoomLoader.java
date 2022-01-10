@@ -11,5 +11,7 @@ public class RoomLoader {
         System.out.println("3. Grand Deluxe ");
         System.out.println("4. Suite Junior ");
         System.out.println("5. Suite Executive ");
+
+
     }
 }
