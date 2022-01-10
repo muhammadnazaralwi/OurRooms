@@ -1,11 +1,10 @@
-package com.ourrooms;
+package room;
 
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.net.URL;
 
 public class RoomLoader {
     public void load() throws FileNotFoundException {

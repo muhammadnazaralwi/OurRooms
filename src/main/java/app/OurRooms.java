@@ -1,6 +1,6 @@
-package com.app;
+package app;
 
-import com.ourrooms.User;
+import user.User;
 
 import java.util.Scanner;
 

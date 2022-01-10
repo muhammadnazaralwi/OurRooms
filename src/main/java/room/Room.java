@@ -1,4 +1,4 @@
-package com.ourrooms;
+package room;
 
 import java.util.UUID;
 

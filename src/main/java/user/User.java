@@ -1,4 +1,4 @@
-package com.ourrooms;
+package user;
 
 public class User {
     String nin;

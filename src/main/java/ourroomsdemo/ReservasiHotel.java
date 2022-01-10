@@ -1,4 +1,4 @@
-package com.ourroomsdemo;
+package ourroomsdemo;
 
 import java.util.Scanner;
 
