@@ -9,7 +9,11 @@ import java.net.URL;
 
 public class RoomLoader {
     public void load() throws FileNotFoundException {
+        Room[] rooms = parse();
 
+        for (int i = 0; i < rooms.length; i++) {
+            System.out.println((i+1) + ". " + rooms[i].name);
+        }
     }
 
     private static Room[] parse() throws FileNotFoundException {
