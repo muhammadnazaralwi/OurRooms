@@ -17,9 +17,12 @@ public class RoomLoader {
     }
 
     private static Room[] parse() throws FileNotFoundException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader("room.json"));
         Gson gson = new Gson();
 
-        return gson.fromJson(bufferedReader, Room[].class);
+        return gson.fromJson(readFile("room.json"), Room[].class);
+    }
+
+    private static BufferedReader readFile(String fileName) throws FileNotFoundException {
+        return new BufferedReader(new FileReader(fileName));
     }
 }
