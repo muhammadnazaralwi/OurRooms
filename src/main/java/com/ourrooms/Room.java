@@ -5,7 +5,8 @@ import java.util.UUID;
 public class Room {
     UUID id;
     String name;
-    String description;
-    String menu;
-    String location;
+
+    public String toString() {
+        return "Room [ id: " + id + ", name: " + name + " ]";
+    }
 }
