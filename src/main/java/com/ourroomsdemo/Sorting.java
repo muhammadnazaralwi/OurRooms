@@ -1,4 +1,4 @@
-package com.ourrooms;
+package com.ourroomsdemo;
 
 public class Sorting {
     public static void main(String[] args) {

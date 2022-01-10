@@ -1,8 +1,8 @@
-package com.ourrooms;
+package com.ourroomsdemo;
 
 import java.util.Scanner;
 
-public class ReservasiHotel {
+public class Demo {
     static String nama, NIK, kamar, menuBreakfast, notaPembayaran;
 
     public static void main(String[] args) {
@@ -47,7 +47,7 @@ public class ReservasiHotel {
 
         tanggalCheckOut = formatTanggalCheckOut(jam, menit, hari, tanggal+1, bulan, tahun);
 
-        while(!isBook) {
+        while(isBook == false) {
             cetakPilihanKamar();
             System.out.print("Cek fasilitas kamar(1-5)\t\t: ");
             pilihUntukCekKamar = userInputInteger.nextInt();
