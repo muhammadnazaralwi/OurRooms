@@ -10,8 +10,8 @@ public class MenuLoader {
     public void load() throws FileNotFoundException {
         Menu[] menus = parse();
 
-        for (int i = 0; i < menus.length; i++) {
-            System.out.println(menus[i].id + ". " + menus[i].name);
+        for (Menu menu : menus) {
+            System.out.println(menu.id + ". " + menu.name);
         }
     }
 

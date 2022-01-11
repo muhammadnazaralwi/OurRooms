@@ -10,8 +10,8 @@ public class RoomLoader {
     public void load() throws FileNotFoundException {
         Room[] rooms = parse();
 
-        for (int i = 0; i < rooms.length; i++) {
-            System.out.println(rooms[i].id + ". " + rooms[i].name);
+        for (Room room : rooms) {
+            System.out.println(room.id + ". " + room.name);
         }
     }
 
