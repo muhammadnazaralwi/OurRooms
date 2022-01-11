@@ -3,6 +3,8 @@ package user;
 import menu.Menu;
 import room.Room;
 
+import java.util.Arrays;
+
 public class Transaction {
     User user;
     String checkIn, checkOut;
@@ -19,12 +21,25 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction{" +
-                "user=" + user +
-                ", checkIn='" + checkIn + '\'' +
-                ", checkOut='" + checkOut + '\'' +
-                ", room=" + room +
-                ", menu=" + menu +
-                '}';
+        return "\n|---------------------- NOTA PEMBAYARAN HOTEL ----------------------|" +
+                "\nNIK\t: " + user.nin +
+                "\nNama\t: " + user.name +
+                "\nKamar\t: \n" +
+                stringFacilities() +
+                "\nMenu Breakfast\t: " + menu.getName() +
+                "\nCheck in\t: " + checkIn +
+                "\nCheck out\t: " + checkOut +
+                "\nTotal Pembayaran\t: " + room.getPrice() +
+                "\n|-------------------------------------------------------------------|" +
+                "\n\t\t\t\t\t\t\tTERIMA KASIH" +
+                "\n\t\t\t\t\t\tATAS KUNJUNGAN ANDA\n";
+    }
+
+    private StringBuilder stringFacilities() {
+        StringBuilder facilities = new StringBuilder();
+        for (String facility : room.getFacilities()) {
+            facilities.append("\t- ").append(facility).append("\n");
+        }
+        return facilities;
     }
 }

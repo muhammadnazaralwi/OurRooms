@@ -32,25 +32,27 @@ public class OurRooms {
         char bookChoose;
         boolean isBook = false;
 
-        System.out.print("NIK: ");
+        System.out.println("Silahkan Isi Data Diri Anda");
+        System.out.print("Masukan NIK: ");
         nin = stringInput.nextLine();
-        System.out.print("Nama: ");
+        System.out.print("Masukan Nama: ");
         name = stringInput.nextLine();
         user = new User(nin, name);
 
-        System.out.println("Check in");
+        System.out.print("Silahkan Isi Tanggal Check In (dd/mm/yyyy): ");
         checkIn = stringInput.nextLine();
-        System.out.println("Check out");
+        System.out.print("Silahkan Isi Tanggal Check out (dd/mm/yyyy): ");
         checkOut = stringInput.nextLine();
 
         rooms = roomLoader.load();
         menus = menuLoader.load();
 
         while(!isBook) {
-            System.out.println("DAFTAR KAMAR");
+            System.out.println("\nDAFTAR KAMAR");
             roomLoader.showRoomList();
             System.out.print("Cek fasilitas kamar(1-5)\t: ");
             choose = integerInput.nextInt();
+            System.out.println();
             roomLoader.showDetailList(choose);
             System.out.print("Book(y/n)? ");
             bookChoose = charInput.next().charAt(0);
@@ -60,6 +62,7 @@ public class OurRooms {
         myRoom = rooms[choose-1];
 
         if (myRoom.isBreakfast()) {
+            System.out.println("\nMENU BREAKFAST");
             menuLoader.showMenuList();
         }
 

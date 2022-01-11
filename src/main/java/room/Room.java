@@ -17,6 +17,14 @@ public class Room {
         this.breakfast = breakfast;
     }
 
+    public String[] getFacilities() {
+        return facilities;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
     public boolean isBreakfast() {
         return breakfast;
     }
