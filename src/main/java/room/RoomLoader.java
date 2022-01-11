@@ -11,7 +11,7 @@ public class RoomLoader {
         Room[] rooms = parse();
 
         for (int i = 0; i < rooms.length; i++) {
-            System.out.println((i+1) + ". " + rooms[i].name);
+            System.out.println(rooms[i].id + ". " + rooms[i].name);
         }
     }
 

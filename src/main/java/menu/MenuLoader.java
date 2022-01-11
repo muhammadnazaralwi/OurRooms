@@ -11,7 +11,7 @@ public class MenuLoader {
         Menu[] menus = parse();
 
         for (int i = 0; i < menus.length; i++) {
-            System.out.println((i+1) + ". " + menus[i].name);
+            System.out.println(menus[i].id + ". " + menus[i].name);
         }
     }
 
