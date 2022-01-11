@@ -7,12 +7,27 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class RoomLoader {
-    public void load() throws FileNotFoundException {
-        Room[] rooms = parse();
+    public static Room[] load() throws FileNotFoundException {
+        return parse();
+    }
+
+    public void showRoomList() throws FileNotFoundException {
+        Room[] rooms = load();
 
         for (Room room : rooms) {
             System.out.println(room.id + ". " + room.name);
         }
+    }
+
+    public void showDetailList(int id) throws FileNotFoundException {
+        Room[] rooms = load();
+
+        int index = id-1;
+        System.out.println(rooms[index].name.toUpperCase());
+        for (String facility : rooms[index].facilities) {
+            System.out.println("\t- " + facility);
+        }
+        System.out.println("\tHarga: Rp" + rooms[index].price);
     }
 
     private static Room[] parse() throws FileNotFoundException {

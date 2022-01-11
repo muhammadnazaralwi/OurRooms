@@ -2,31 +2,35 @@
   {
     "id": "1",
     "name": "Deluxe Double Room",
-    "facility": [
+    "facilities": [
       "Ukuran Kamar 20 m^2",
       "Sower",
       "Double bad",
       "Maks 2 orang  (2 anak usia 0 – 5 tahun menginap gratis)",
       "Air Conditioner",
       "Free Wifi"
-    ]
+    ],
+    "price": 530000,
+    "free_breakfast": false
   },
   {
     "id": "2",
     "name": "Deluxe Twin Room",
-    "facility": [
+    "facilities": [
       "Ukuran Kamar 24 m^2",
       "Sower",
       "1 kasur queen size",
       "Maks 2 orang  (2 anak usia 0 – 5 tahun menginap gratis)",
       "Air Conditioner",
       "Free Wifi"
-    ]
+    ],
+    "price": 670000,
+    "free_breakfast": false
   },
   {
     "id": "3",
     "name": "Grand Deluxe",
-    "facility": [
+    "facilities": [
       "Ukuran Kamar 27 m^2",
       "Sower dan Bathtub",
       "Akses Executive Lounge",
@@ -35,12 +39,14 @@
       "Maks 2 orang (2 anak usia 0 – 5 tahun menginap gratis)",
       "Free Wifi Pribadi",
       "Free Breakfast"
-    ]
+    ],
+    "price": 980000,
+    "free_breakfast": true
   },
   {
     "id": "4",
     "name": "Suite Junior",
-    "facility": [
+    "facilities": [
       "Ukuran Ruangan 34 m^2",
       "Pemandangan Kota",
       "Bebas Asap Rokok",
@@ -52,12 +58,14 @@
       "Free wifi Pribadi",
       "Free Breakfast sangat enak",
       "Free Spa"
-    ]
+    ],
+    "price": 1950000,
+    "free_breakfast": true
   },
   {
     "id": "5",
     "name": "Suite Executive",
-    "facility": [
+    "facilities": [
       "Ukuran Ruangan 48 m^2",
       "Pemandangan Kota",
       "Sower dan Bathtub",
@@ -70,6 +78,8 @@
       "Free Breakfast sangat enak",
       "Free Spa",
       "Free Laundry"
-    ]
+    ],
+    "price": 2500000,
+    "free_breakfast": true
   }
 ]
