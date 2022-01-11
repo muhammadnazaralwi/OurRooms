@@ -21,13 +21,14 @@ public class OurRooms {
         Room[] rooms;
         Room myRoom;
         RoomLoader roomLoader = new RoomLoader();
-        Menu menu = new Menu();
+        Menu[] menus;
+        Menu myMenu;
         MenuLoader menuLoader = new MenuLoader();
         Transaction transaction;
         String nin, name, checkIn, checkOut;
         Date checkInDate, checkOutDate;
         User user;
-        int choose = 0;
+        int choose = 0, selectedBreakfast = 0;
         char bookChoose;
         boolean isBook = false;
 
@@ -43,6 +44,7 @@ public class OurRooms {
         checkOut = stringInput.nextLine();
 
         rooms = roomLoader.load();
+        menus = menuLoader.load();
 
         while(!isBook) {
             System.out.println("DAFTAR KAMAR");
@@ -58,8 +60,13 @@ public class OurRooms {
         myRoom = rooms[choose-1];
 
         if (myRoom.isBreakfast()) {
-            menuLoader.load();
+            menuLoader.showMenuList();
         }
+
+        System.out.print("Pilih menu: ");
+        selectedBreakfast = integerInput.nextInt();
+
+        myMenu = menus[selectedBreakfast-1];
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -68,7 +75,7 @@ public class OurRooms {
         checkInDate = sdf.parse(checkIn);
         checkOutDate = sdf.parse(checkOut);
 
-        transaction = new Transaction(user, sdfNew.format(checkInDate), sdfNew.format(checkOutDate), myRoom, menu);
+        transaction = new Transaction(user, sdfNew.format(checkInDate), sdfNew.format(checkOutDate), myRoom, myMenu);
 
         System.out.println(transaction);
     }
