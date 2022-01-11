@@ -1,7 +1,5 @@
 package app;
 
-import detail.RoomDetail;
-import detail.RoomDetailLoader;
 import menu.Menu;
 import room.Room;
 import room.RoomLoader;
@@ -21,9 +19,7 @@ public class OurRooms {
         Scanner charInput = new Scanner(System.in);
         Room[] rooms;
         RoomLoader roomLoader = new RoomLoader();
-        RoomDetail roomDetail = new RoomDetail();
         Menu menu = new Menu();
-        RoomDetailLoader roomDetailLoader = new RoomDetailLoader();
         Transaction transaction;
         String nin, name, checkIn, checkOut;
         Date checkInDate, checkOutDate;
@@ -47,10 +43,10 @@ public class OurRooms {
 
         while(!isBook) {
             System.out.println("DAFTAR KAMAR");
-            roomLoader.show();
+            roomLoader.showRoomList();
             System.out.print("Cek fasilitas kamar(1-5)\t: ");
             choose = integerInput.nextInt();
-            roomDetailLoader.load(choose);
+            roomLoader.showDetailList(choose);
             System.out.print("Book(y/n)? ");
             bookChoose = charInput.next().charAt(0);
             isBook = bookChoose == 'y';

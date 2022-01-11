@@ -1,6 +1,7 @@
 package room;
 
 import com.google.gson.Gson;
+import detail.RoomDetail;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -11,12 +12,23 @@ public class RoomLoader {
         return parse();
     }
 
-    public void show() throws FileNotFoundException {
+    public void showRoomList() throws FileNotFoundException {
         Room[] rooms = load();
 
         for (Room room : rooms) {
             System.out.println(room.id + ". " + room.name);
         }
+    }
+
+    public void showDetailList(int id) throws FileNotFoundException {
+        Room[] rooms = load();
+
+        int index = id-1;
+        System.out.println(rooms[index].name.toUpperCase());
+        for (String facility : rooms[index].facilities) {
+            System.out.println("\t- " + facility);
+        }
+        System.out.println("\tHarga: Rp" + rooms[index].price);
     }
 
     private static Room[] parse() throws FileNotFoundException {
