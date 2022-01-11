@@ -8,14 +8,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class RoomDetailLoader {
-    public void load() throws FileNotFoundException {
+    public void load(int id) throws FileNotFoundException {
         RoomDetail[] roomDetails = parse();
 
-        for (RoomDetail roomDetail : roomDetails) {
-            System.out.println(roomDetail.name.toUpperCase());
-            for (String facility : roomDetail.facility) {
-                System.out.println("\t- " + facility);
-            }
+        System.out.println(roomDetails[id].name.toUpperCase());
+        for (String facility : roomDetails[id].facility ) {
+            System.out.println("\t- " + facility);
         }
     }
 
