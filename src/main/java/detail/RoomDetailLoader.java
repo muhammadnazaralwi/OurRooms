@@ -10,9 +10,9 @@ import java.io.FileReader;
 public class RoomDetailLoader {
     public void load(int id) throws FileNotFoundException {
         RoomDetail[] roomDetails = parse();
-
-        System.out.println(roomDetails[id].name.toUpperCase());
-        for (String facility : roomDetails[id].facility ) {
+        int index = id - 1;
+        System.out.println(roomDetails[index].name.toUpperCase());
+        for (String facility : roomDetails[index].facility ) {
             System.out.println("\t- " + facility);
         }
     }
