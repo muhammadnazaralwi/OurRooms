@@ -21,6 +21,7 @@ public class OurRooms {
         Scanner charInput = new Scanner(System.in);
         Room room = new Room();
         RoomLoader roomLoader = new RoomLoader();
+        RoomDetail roomDetail = new RoomDetail();
         Menu menu = new Menu();
         RoomDetailLoader roomDetailLoader = new RoomDetailLoader();
         Transaction transaction;
@@ -53,8 +54,13 @@ public class OurRooms {
             isBook = bookChoose == 'y';
         }
 
-        checkInDate = new SimpleDateFormat("E, MMM dd yyyy").parse(checkIn);
-        checkOutDate = new SimpleDateFormat("E, MMM dd yyyy").parse(checkOut);
-        transaction = new Transaction(user, checkInDate, checkOutDate, room, menu);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+        SimpleDateFormat sdfNew = new SimpleDateFormat("E, MMM dd yyyy");
+
+        checkInDate = sdf.parse(checkIn);
+        checkOutDate = sdf.parse(checkOut);
+
+        transaction = new Transaction(user, sdfNew.format(checkInDate), sdfNew.format(checkOutDate), room, menu);
     }
 }
