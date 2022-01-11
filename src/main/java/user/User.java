@@ -9,22 +9,6 @@ public class User {
         this.name = name;
     }
 
-    public String getNin() {
-        return nin;
-    }
-
-    public void setNin(String nin) {
-        this.nin = nin;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     @Override
     public String toString() {
         return "User{" +

@@ -1,7 +1,6 @@
 package menu;
 
 import com.google.gson.Gson;
-import room.Room;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
