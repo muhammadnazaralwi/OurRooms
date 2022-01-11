@@ -1,5 +1,7 @@
 package room;
 
+import java.util.Arrays;
+
 public class Room {
     int id;
     String name;
@@ -53,5 +55,16 @@ public class Room {
 
     public void setBreakfast(boolean breakfast) {
         this.breakfast = breakfast;
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", facilities=" + Arrays.toString(facilities) +
+                ", price=" + price +
+                ", breakfast=" + breakfast +
+                '}';
     }
 }
