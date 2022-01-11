@@ -2,22 +2,32 @@ package app;
 
 import detail.RoomDetail;
 import detail.RoomDetailLoader;
+import menu.Menu;
+import room.Room;
 import room.RoomLoader;
+import user.Transaction;
 import user.User;
 
 import java.io.FileNotFoundException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class OurRooms {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException, ParseException {
         Scanner stringInput = new Scanner(System.in);
         Scanner integerInput = new Scanner(System.in);
         Scanner charInput = new Scanner(System.in);
+        Room room = new Room();
         RoomLoader roomLoader = new RoomLoader();
+        Menu menu = new Menu();
         RoomDetailLoader roomDetailLoader = new RoomDetailLoader();
+        Transaction transaction;
         String nin, name, checkIn, checkOut;
+        Date checkInDate, checkOutDate;
         User user;
-        int choose;
+        int choose = 0;
         char bookChoose;
         boolean isBook = false;
 
@@ -40,11 +50,11 @@ public class OurRooms {
             roomDetailLoader.load(choose);
             System.out.print("Book(y/n)? ");
             bookChoose = charInput.next().charAt(0);
-            if (bookChoose == 'y') {
-                isBook = true;
-            } else {
-                isBook = false;
-            }
+            isBook = bookChoose == 'y';
         }
+
+        checkInDate = new SimpleDateFormat("E, MMM dd yyyy").parse(checkIn);
+        checkOutDate = new SimpleDateFormat("E, MMM dd yyyy").parse(checkOut);
+        transaction = new Transaction(user, checkInDate, checkOutDate, room, menu);
     }
 }
