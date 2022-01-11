@@ -16,4 +16,15 @@ public class Transaction {
         this.room = room;
         this.menu = menu;
     }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "user=" + user +
+                ", checkIn='" + checkIn + '\'' +
+                ", checkOut='" + checkOut + '\'' +
+                ", room=" + room +
+                ", menu=" + menu +
+                '}';
+    }
 }

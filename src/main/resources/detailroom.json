@@ -9,7 +9,9 @@
       "Maks 2 orang  (2 anak usia 0 – 5 tahun menginap gratis)",
       "Air Conditioner",
       "Free Wifi"
-    ]
+    ],
+    "price": 530000,
+    "free_breakfast": false
   },
   {
     "id": "2",
@@ -21,7 +23,9 @@
       "Maks 2 orang  (2 anak usia 0 – 5 tahun menginap gratis)",
       "Air Conditioner",
       "Free Wifi"
-    ]
+    ],
+    "price": 670000,
+    "free_breakfast": false
   },
   {
     "id": "3",
@@ -35,7 +39,9 @@
       "Maks 2 orang (2 anak usia 0 – 5 tahun menginap gratis)",
       "Free Wifi Pribadi",
       "Free Breakfast"
-    ]
+    ],
+    "price": 980000,
+    "free_breakfast": true
   },
   {
     "id": "4",
@@ -52,7 +58,9 @@
       "Free wifi Pribadi",
       "Free Breakfast sangat enak",
       "Free Spa"
-    ]
+    ],
+    "price": 1950000,
+    "free_breakfast": true
   },
   {
     "id": "5",
@@ -70,6 +78,8 @@
       "Free Breakfast sangat enak",
       "Free Spa",
       "Free Laundry"
-    ]
+    ],
+    "price": 2500000,
+    "free_breakfast": true
   }
 ]

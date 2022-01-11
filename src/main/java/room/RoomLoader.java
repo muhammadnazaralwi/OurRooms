@@ -7,8 +7,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class RoomLoader {
-    public void load() throws FileNotFoundException {
-        Room[] rooms = parse();
+    public Room[] load() throws FileNotFoundException {
+        return parse();
+    }
+
+    public void show() throws FileNotFoundException {
+        Room[] rooms = load();
 
         for (Room room : rooms) {
             System.out.println(room.id + ". " + room.name);

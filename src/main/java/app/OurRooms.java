@@ -19,7 +19,7 @@ public class OurRooms {
         Scanner stringInput = new Scanner(System.in);
         Scanner integerInput = new Scanner(System.in);
         Scanner charInput = new Scanner(System.in);
-        Room room = new Room();
+        Room[] rooms;
         RoomLoader roomLoader = new RoomLoader();
         RoomDetail roomDetail = new RoomDetail();
         Menu menu = new Menu();
@@ -43,9 +43,11 @@ public class OurRooms {
         System.out.println("Check out");
         checkOut = stringInput.nextLine();
 
+        rooms = roomLoader.load();
+
         while(!isBook) {
             System.out.println("DAFTAR KAMAR");
-            roomLoader.load();
+            roomLoader.show();
             System.out.print("Cek fasilitas kamar(1-5)\t: ");
             choose = integerInput.nextInt();
             roomDetailLoader.load(choose);
@@ -61,6 +63,8 @@ public class OurRooms {
         checkInDate = sdf.parse(checkIn);
         checkOutDate = sdf.parse(checkOut);
 
-        transaction = new Transaction(user, sdfNew.format(checkInDate), sdfNew.format(checkOutDate), room, menu);
+        transaction = new Transaction(user, sdfNew.format(checkInDate), sdfNew.format(checkOutDate), rooms[choose], menu);
+
+        System.out.println(transaction);
     }
 }
