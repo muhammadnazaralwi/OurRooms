@@ -1,22 +1,22 @@
 [
     {
-        "id": "6948DF80-14BD-4E04-8842-7668D9C001F5",
+        "id": "1",
         "name": "Deluxe Double Room"
     },
     {
-        "id": "4B8302DA-21AD-401F-AF45-1DFD956B80B5",
+        "id": "2",
         "name": "Deluxe Twin Room"
     },
     {
-        "id": "8628FE7C-A4E9-4056-91BD-FD6AA7817E39",
+        "id": "3",
         "name": "Grand Deluxe"
     },
     {
-        "id": "10929DF8-15C5-472B-9398-7158AB89A0A6",
+        "id": "4",
         "name": "Suite Junior"
     },
     {
-        "id": "ED280816-E404-444A-A2D9-FFD2D171F928",
+        "id": "5",
         "name": "Suite Executive"
     }
 ]

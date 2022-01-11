@@ -1,9 +1,7 @@
 package room;
 
-import java.util.UUID;
-
 public class Room {
-    UUID id;
+    int id;
     String name;
 
     public String toString() {
