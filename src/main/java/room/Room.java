@@ -5,14 +5,14 @@ public class Room {
     String name;
     String[] facilities;
     int price;
-    boolean isFreeBreakfast;
+    boolean breakfast;
 
-    public Room(int id, String name, String[] facilities, int price, boolean isFreeBreakfast) {
+    public Room(int id, String name, String[] facilities, int price, boolean breakfast) {
         this.id = id;
         this.name = name;
         this.facilities = facilities;
         this.price = price;
-        this.isFreeBreakfast = isFreeBreakfast;
+        this.breakfast = breakfast;
     }
 
     public int getId() {
@@ -47,11 +47,11 @@ public class Room {
         this.price = price;
     }
 
-    public boolean isFreeBreakfast() {
-        return isFreeBreakfast;
+    public boolean isBreakfast() {
+        return breakfast;
     }
 
-    public void setFreeBreakfast(boolean freeBreakfast) {
-        isFreeBreakfast = freeBreakfast;
+    public void setBreakfast(boolean breakfast) {
+        this.breakfast = breakfast;
     }
 }

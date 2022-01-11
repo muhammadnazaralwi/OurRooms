@@ -1,6 +1,7 @@
 package app;
 
 import menu.Menu;
+import menu.MenuLoader;
 import room.Room;
 import room.RoomLoader;
 import user.Transaction;
@@ -18,8 +19,10 @@ public class OurRooms {
         Scanner integerInput = new Scanner(System.in);
         Scanner charInput = new Scanner(System.in);
         Room[] rooms;
+        Room myRoom;
         RoomLoader roomLoader = new RoomLoader();
         Menu menu = new Menu();
+        MenuLoader menuLoader = new MenuLoader();
         Transaction transaction;
         String nin, name, checkIn, checkOut;
         Date checkInDate, checkOutDate;
@@ -52,6 +55,12 @@ public class OurRooms {
             isBook = bookChoose == 'y';
         }
 
+        myRoom = rooms[choose-1];
+
+        if (myRoom.isBreakfast()) {
+            menuLoader.load();
+        }
+
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         SimpleDateFormat sdfNew = new SimpleDateFormat("E, MMM dd yyyy");
@@ -59,7 +68,7 @@ public class OurRooms {
         checkInDate = sdf.parse(checkIn);
         checkOutDate = sdf.parse(checkOut);
 
-        transaction = new Transaction(user, sdfNew.format(checkInDate), sdfNew.format(checkOutDate), rooms[choose], menu);
+        transaction = new Transaction(user, sdfNew.format(checkInDate), sdfNew.format(checkOutDate), myRoom, menu);
 
         System.out.println(transaction);
     }
