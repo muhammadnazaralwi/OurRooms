@@ -8,9 +8,8 @@ import room.RoomLoader;
 import room.RoomPrinter;
 import user.Transaction;
 import user.User;
+import utils.MyDateFormatter;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Scanner;
 
 public class OurRooms {
@@ -28,7 +27,7 @@ public class OurRooms {
         MenuPrinter menuPrinter = new MenuPrinter();
         Transaction transaction;
         String nin, name, checkIn, checkOut;
-        Date checkInDate, checkOutDate;
+        MyDateFormatter formatter = new MyDateFormatter();
         User user;
         int choose = 0, selectedBreakfast;
         char bookChoose;
@@ -73,14 +72,12 @@ public class OurRooms {
 
         myMenu = menus[selectedBreakfast-1];
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
-        SimpleDateFormat sdfNew = new SimpleDateFormat("E, MMM dd yyyy");
-
-        checkInDate = sdf.parse(checkIn);
-        checkOutDate = sdf.parse(checkOut);
-
-        transaction = new Transaction(user, sdfNew.format(checkInDate), sdfNew.format(checkOutDate), myRoom, myMenu);
+        transaction = new Transaction(
+                user,
+                formatter.getFormattedDateWithDay(checkIn),
+                formatter.getFormattedDateWithDay(checkOut),
+                myRoom,
+                myMenu);
 
         System.out.println(transaction);
     }
