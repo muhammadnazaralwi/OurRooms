@@ -28,7 +28,7 @@ public class OurRooms {
         String nin, name, checkIn, checkOut;
         Date checkInDate, checkOutDate;
         User user;
-        int choose = 0, selectedBreakfast = 0;
+        int choose = 0, selectedBreakfast;
         char bookChoose;
         boolean isBook = false;
 
