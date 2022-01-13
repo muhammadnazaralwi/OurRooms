@@ -11,7 +11,7 @@ public class Parser<T> {
     public T[] parse(String path) throws FileNotFoundException {
         Gson gson = new Gson();
         Type typeOfT = new TypeToken<T>(){}.getType();
-        BufferedReader roomJson = FileReader.readFile(path);
+        BufferedReader roomJson = MyFileReader.readFile(path);
 
         return gson.fromJson(roomJson, typeOfT);
     }
