@@ -2,6 +2,7 @@ package app;
 
 import menu.Menu;
 import menu.MenuLoader;
+import menu.MenuPrinter;
 import room.Room;
 import room.RoomLoader;
 import user.Transaction;
@@ -22,6 +23,7 @@ public class OurRooms {
         Menu[] menus;
         Menu myMenu;
         MenuLoader menuLoader = new MenuLoader();
+        MenuPrinter menuPrinter = new MenuPrinter();
         Transaction transaction;
         String nin, name, checkIn, checkOut;
         Date checkInDate, checkOutDate;
@@ -61,7 +63,7 @@ public class OurRooms {
 
         if (myRoom.isBreakfast()) {
             System.out.println("\nMENU BREAKFAST");
-            menuLoader.showMenuList();
+            menuPrinter.showMenuList();
         }
 
         System.out.print("Pilih menu: ");
