@@ -5,9 +5,9 @@ import utils.Parser;
 
 public class RoomLoader implements Loader<Room> {
     public Room[] load() throws Exception {
-        Parser<Room> parser = new Parser<>();
+        Parser parser = new Parser();
 
-        return parser.parse("src/main/resources/room.json");
+        return parser.parse(Room[].class, "src/main/resources/room.json");
     }
 
     public void showRoomList() throws Exception {
