@@ -1,8 +1,10 @@
 package room;
 
-public class RoomPrinter {
+import feature.Printer;
+
+public class RoomPrinter implements Printer {
     RoomLoader roomLoader = new RoomLoader();
-    public void showRoomList() throws Exception {
+    public void show() throws Exception {
         Room[] rooms = roomLoader.load();
 
         for (Room room : rooms) {

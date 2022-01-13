@@ -51,7 +51,7 @@ public class OurRooms {
 
         while(!isBook) {
             System.out.println("\nDAFTAR KAMAR");
-            roomPrinter.showRoomList();
+            roomPrinter.show();
             System.out.print("Cek fasilitas kamar(1-5)\t: ");
             choose = integerInput.nextInt();
             System.out.println();
@@ -65,7 +65,7 @@ public class OurRooms {
 
         if (myRoom.isBreakfast()) {
             System.out.println("\nMENU BREAKFAST");
-            menuPrinter.showMenuList();
+            menuPrinter.show();
         }
 
         System.out.print("Pilih menu: ");
