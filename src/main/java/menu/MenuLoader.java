@@ -2,10 +2,9 @@ package menu;
 
 import com.google.gson.Gson;
 import feature.Loader;
+import utils.FileReader;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 
 public class MenuLoader implements Loader<Menu> {
     public Menu[] load() throws Exception {
@@ -22,11 +21,8 @@ public class MenuLoader implements Loader<Menu> {
 
     private static Menu[] parse() throws Exception {
         Gson gson = new Gson();
+        BufferedReader menuJson = FileReader.readFile("src/main/resources/menu.json");
 
-        return gson.fromJson(readFile("src/main/resources/menu.json"), Menu[].class);
-    }
-
-    private static BufferedReader readFile(String fileName) throws FileNotFoundException {
-        return new BufferedReader(new FileReader(fileName));
+        return gson.fromJson(menuJson, Menu[].class);
     }
 }
