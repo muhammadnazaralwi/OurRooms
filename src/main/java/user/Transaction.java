@@ -3,8 +3,6 @@ package user;
 import menu.Menu;
 import room.Room;
 
-import java.util.Arrays;
-
 public class Transaction {
     User user;
     String checkIn, checkOut;
