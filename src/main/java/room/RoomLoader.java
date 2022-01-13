@@ -8,11 +8,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class RoomLoader implements Loader<Room> {
-    public Room[] load() throws FileNotFoundException {
+    public Room[] load() throws Exception {
         return parse();
     }
 
-    public void showRoomList() throws FileNotFoundException {
+    public void showRoomList() throws Exception {
         Room[] rooms = load();
 
         for (Room room : rooms) {
@@ -20,7 +20,7 @@ public class RoomLoader implements Loader<Room> {
         }
     }
 
-    public void showDetailList(int id) throws FileNotFoundException {
+    public void showDetailList(int id) throws Exception {
         Room[] rooms = load();
 
         int index = id-1;

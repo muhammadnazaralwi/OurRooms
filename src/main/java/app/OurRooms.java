@@ -7,14 +7,12 @@ import room.RoomLoader;
 import user.Transaction;
 import user.User;
 
-import java.io.FileNotFoundException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
 public class OurRooms {
-    public static void main(String[] args) throws FileNotFoundException, ParseException {
+    public static void main(String[] args) throws Exception {
         Scanner stringInput = new Scanner(System.in);
         Scanner integerInput = new Scanner(System.in);
         Scanner charInput = new Scanner(System.in);

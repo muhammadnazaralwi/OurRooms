@@ -8,11 +8,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class MenuLoader implements Loader<Menu> {
-    public Menu[] load() throws FileNotFoundException {
+    public Menu[] load() throws Exception {
         return parse();
     }
 
-    public void showMenuList() throws FileNotFoundException {
+    public void showMenuList() throws Exception {
         Menu[] menus = parse();
 
         for (Menu menu : menus) {
@@ -20,7 +20,7 @@ public class MenuLoader implements Loader<Menu> {
         }
     }
 
-    private static Menu[] parse() throws FileNotFoundException {
+    private static Menu[] parse() throws Exception {
         Gson gson = new Gson();
 
         return gson.fromJson(readFile("src/main/resources/menu.json"), Menu[].class);
