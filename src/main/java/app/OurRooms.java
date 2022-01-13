@@ -5,6 +5,7 @@ import menu.MenuLoader;
 import menu.MenuPrinter;
 import room.Room;
 import room.RoomLoader;
+import room.RoomPrinter;
 import user.Transaction;
 import user.User;
 
@@ -20,6 +21,7 @@ public class OurRooms {
         Room[] rooms;
         Room myRoom;
         RoomLoader roomLoader = new RoomLoader();
+        RoomPrinter roomPrinter = new RoomPrinter();
         Menu[] menus;
         Menu myMenu;
         MenuLoader menuLoader = new MenuLoader();
@@ -49,11 +51,11 @@ public class OurRooms {
 
         while(!isBook) {
             System.out.println("\nDAFTAR KAMAR");
-            roomLoader.showRoomList();
+            roomPrinter.showRoomList();
             System.out.print("Cek fasilitas kamar(1-5)\t: ");
             choose = integerInput.nextInt();
             System.out.println();
-            roomLoader.showDetailList(choose);
+            roomPrinter.showDetailList(choose);
             System.out.print("Book(y/n)? ");
             bookChoose = charInput.next().charAt(0);
             isBook = bookChoose == 'y';
