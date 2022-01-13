@@ -17,18 +17,22 @@ public class OurRooms {
         Scanner stringInput = new Scanner(System.in);
         Scanner integerInput = new Scanner(System.in);
         Scanner charInput = new Scanner(System.in);
+
         Room[] rooms;
         Room myRoom;
         RoomLoader roomLoader = new RoomLoader();
         RoomPrinter roomPrinter = new RoomPrinter();
+
         Menu[] menus;
         Menu myMenu;
         MenuLoader menuLoader = new MenuLoader();
         MenuPrinter menuPrinter = new MenuPrinter();
-        Transaction transaction;
+
         String nin, name, checkIn, checkOut;
         MyDateFormatter formatter = new MyDateFormatter();
+        Transaction transaction;
         User user;
+
         int choose = 0, selectedBreakfast;
         char bookChoose;
         boolean isBook = false;
