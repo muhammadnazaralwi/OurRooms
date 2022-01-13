@@ -1,15 +1,13 @@
 package room;
 
-import com.google.gson.Gson;
 import feature.Loader;
-import utils.FileReader;
-
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
+import utils.Parser;
 
 public class RoomLoader implements Loader<Room> {
     public Room[] load() throws Exception {
-        return parse();
+        Parser<Room> parser = new Parser<>();
+
+        return parser.parse("src/main/resources/room.json");
     }
 
     public void showRoomList() throws Exception {
@@ -29,12 +27,5 @@ public class RoomLoader implements Loader<Room> {
             System.out.println("\t- " + facility);
         }
         System.out.println("\tHarga: Rp" + rooms[index].price);
-    }
-
-    private static Room[] parse() throws FileNotFoundException {
-        Gson gson = new Gson();
-        BufferedReader roomJson = FileReader.readFile("src/main/resources/room.json");
-
-        return gson.fromJson(roomJson, Room[].class);
     }
 }
