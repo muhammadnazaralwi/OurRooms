@@ -1,12 +1,13 @@
 package menu;
 
 import com.google.gson.Gson;
+import feature.Loader;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
-public class MenuLoader {
+public class MenuLoader implements Loader<Menu> {
     public Menu[] load() throws FileNotFoundException {
         return parse();
     }
