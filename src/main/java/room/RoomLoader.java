@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class RoomLoader {
-    public static Room[] load() throws FileNotFoundException {
+    public Room[] load() throws FileNotFoundException {
         return parse();
     }
 
