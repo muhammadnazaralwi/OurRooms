@@ -56,7 +56,14 @@ public class OurRooms {
             roomLoader.showDetailList(choose);
             System.out.print("Book(y/n)? ");
             bookChoose = charInput.next().charAt(0);
-            isBook = bookChoose == 'y';
+            if (bookChoose == 'y' || bookChoose == 'Y') {
+                isBook = true;
+            } else if (bookChoose == 'n' || bookChoose == 'N') {
+                isBook = false;
+            } else {
+                System.out.println("Silahkan masukan huruf yang sudah ditentukan");
+                isBook = false;
+            }
         }
 
         myRoom = rooms[choose-1];
