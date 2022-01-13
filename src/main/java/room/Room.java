@@ -1,7 +1,5 @@
 package room;
 
-import java.util.Arrays;
-
 public class Room {
     int id;
     String name;
