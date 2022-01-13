@@ -54,7 +54,7 @@ public class OurRooms {
             System.out.print("Cek fasilitas kamar(1-5)\t: ");
             choose = integerInput.nextInt();
             System.out.println();
-            roomPrinter.showDetailList(choose);
+            roomPrinter.showDetail(choose);
             System.out.print("Book(y/n)? ");
             bookChoose = charInput.next().charAt(0);
             isBook = bookChoose == 'y';

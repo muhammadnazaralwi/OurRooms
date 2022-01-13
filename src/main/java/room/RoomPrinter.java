@@ -12,7 +12,7 @@ public class RoomPrinter implements Printer {
         }
     }
 
-    public void showDetailList(int id) throws Exception {
+    public void showDetail(int id) throws Exception {
         Room[] rooms = roomLoader.load();;
 
         int index = id-1;
