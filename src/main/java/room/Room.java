@@ -28,15 +28,4 @@ public class Room {
     public boolean isBreakfast() {
         return breakfast;
     }
-
-    @Override
-    public String toString() {
-        return "Room{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", facilities=" + Arrays.toString(facilities) +
-                ", price=" + price +
-                ", breakfast=" + breakfast +
-                '}';
-    }
 }

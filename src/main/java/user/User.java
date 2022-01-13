@@ -8,12 +8,5 @@ public class User {
         this.nin = nin;
         this.name = name;
     }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "nin='" + nin + '\'' +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }
+

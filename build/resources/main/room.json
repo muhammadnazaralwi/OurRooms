@@ -11,7 +11,7 @@
       "Free Wifi"
     ],
     "price": 530000,
-    "free_breakfast": false
+    "breakfast": false
   },
   {
     "id": "2",
@@ -25,7 +25,7 @@
       "Free Wifi"
     ],
     "price": 670000,
-    "free_breakfast": false
+    "breakfast": false
   },
   {
     "id": "3",
@@ -41,7 +41,7 @@
       "Free Breakfast"
     ],
     "price": 980000,
-    "free_breakfast": true
+    "breakfast": true
   },
   {
     "id": "4",
@@ -60,7 +60,7 @@
       "Free Spa"
     ],
     "price": 1950000,
-    "free_breakfast": true
+    "breakfast": true
   },
   {
     "id": "5",
@@ -80,6 +80,6 @@
       "Free Laundry"
     ],
     "price": 2500000,
-    "free_breakfast": true
+    "breakfast": true
   }
 ]
