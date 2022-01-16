@@ -1,5 +1,6 @@
 package menu;
 
+// Class Menu merepresentasikan data menu seperti di JSON
 public class Menu {
     int id;
     String name;

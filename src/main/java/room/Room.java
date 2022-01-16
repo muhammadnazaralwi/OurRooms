@@ -1,5 +1,6 @@
 package room;
 
+// Class Menu merepresentasikan data room seperti di JSON
 public class Room {
     int id;
     String name;
