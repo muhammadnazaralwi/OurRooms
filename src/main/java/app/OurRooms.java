@@ -33,7 +33,7 @@ public class OurRooms {
         Transaction transaction;
         User user;
 
-        int choose = 0, selectedBreakfast;
+        int choose = 0, selectedBreakfast = 0;
         char bookChoose;
         boolean isBook = false;
 
@@ -50,7 +50,6 @@ public class OurRooms {
         checkOut = stringInput.nextLine();
 
         rooms = roomLoader.load();
-        menus = menuLoader.load();
 
         while(!isBook) {
             System.out.println("\nDAFTAR KAMAR");
@@ -76,10 +75,14 @@ public class OurRooms {
         if (myRoom.isBreakfast()) {
             System.out.println("\nMENU BREAKFAST");
             menuPrinter.show();
+            System.out.print("Pilih menu: ");
+            menus = menuLoader.load();
+            selectedBreakfast = integerInput.nextInt();
+        } else {
+            myMenu = new Menu(0, "-");
+            menus = new Menu[]{myMenu};
+            selectedBreakfast = 1;
         }
-
-        System.out.print("Pilih menu: ");
-        selectedBreakfast = integerInput.nextInt();
 
         myMenu = menus[selectedBreakfast-1];
 
