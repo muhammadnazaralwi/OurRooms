@@ -3,6 +3,7 @@ package user;
 import menu.Menu;
 import room.Room;
 
+// Merupakan representasi dari invoice
 public class Transaction {
     User user;
     String checkIn, checkOut;
@@ -17,6 +18,8 @@ public class Transaction {
         this.menu = menu;
     }
 
+    // Menggunakan override method toString
+    // Karena agar bisa mencetak object dari class ini dengan format invoice
     @Override
     public String toString() {
         return "\n|---------------------- NOTA PEMBAYARAN HOTEL ----------------------|" +
@@ -34,6 +37,8 @@ public class Transaction {
                 "\n\t\t\t\t\t\tATAS KUNJUNGAN ANDA\n";
     }
 
+    // Method untuk mengiterasi array fasilitas
+    // dan membuatnya sebagai satu string
     private StringBuilder stringFacilities() {
         StringBuilder facilities = new StringBuilder();
         for (String facility : room.getFacilities()) {

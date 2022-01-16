@@ -1,5 +1,6 @@
 package user;
 
+// Representasi dari user
 public class User {
     String nin;
     String name;
