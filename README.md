@@ -21,12 +21,12 @@
 ### Load Room List Use Case
 
 #### Data:
-- URL
+- JSON
 
 #### Primary course (happy path):
 1. Mengeksekusi perintah "Load Room List" dengan data di atas.
-2. Sistem akan mendonwload data dari url.
-3. System delivers room list.
+2. Sistem akan mengurai data dari json.
+3. System mengirim data room list.
 
 #### Invalid data – error course (sad path):
 1. Sistem menampilkan error.
@@ -40,8 +40,47 @@
 
 | Property      | Type                |
 |---------------|---------------------|
-| `id`          | `UUID`              |
+| `id`          | `int`              |
 | `name` | `String`  |
-| `description`    | `String`               |
-| `breakfast_menu`    | `String`  (optional)|
-| `location`    | `String`  |
+| `facilities`    | `String[]`               |
+| `price`    | `int` |
+| `breakfast`    | `boolean`  |
+
+### Load Room List Use Case
+
+#### Data:
+- JSON
+
+#### Primary course (happy path):
+1. Mengeksekusi perintah "Load Room List" dengan data di atas.
+2. Sistem akan mengurai data dari json.
+3. System mengirim data room list.
+
+#### Invalid data – error course (sad path):
+1. Sistem menampilkan error.
+
+#### No connectivity – error course (sad path):
+1. Sistem menampilkan error.
+
+## Model Specs
+
+### Room
+
+| Property      | Type                |
+|---------------|---------------------|
+| `id`          | `int`              |
+| `name` | `String`  |
+| `facilities`    | `String[]`               |
+| `price`    | `int` |
+| `breakfast`    | `boolean`  |
+
+## Materi yang digunakan
+- Generics
+- Class
+- Abstraction (Interface)
+- BufferedReader
+- Method
+- Looping (While, For i, For each)
+- PBO (Abstraction (Interface), Encapsulation, Polymorphism)
+- Exception
+- If else
