@@ -15,6 +15,10 @@ public class Room {
         this.breakfast = breakfast;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String[] getFacilities() {
         return facilities;
     }

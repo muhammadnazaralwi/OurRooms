@@ -22,7 +22,8 @@ public class Transaction {
         return "\n|---------------------- NOTA PEMBAYARAN HOTEL ----------------------|" +
                 "\nNIK\t: " + user.nin +
                 "\nNama\t: " + user.name +
-                "\nKamar\t: \n" +
+                "\nKamar\t: " + room.getName() +
+                "\nFasilitas\t: \n" +
                 stringFacilities() +
                 "\nMenu Breakfast\t: " + menu.getName() +
                 "\nCheck in\t: " + checkIn +
