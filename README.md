@@ -7,6 +7,10 @@
     <img src="https://img.shields.io/badge/IntelliJ%20IDEA-2020.2.3-blue.svg" />
 </p>
 
+Our Rooms adalah aplikasi untuk pemesanan kamar hotel. Our Rooms memiliki fitur untuk menampilkan tipe kamar dan menampilkan fasilitas berbeda di setiap kamarnya.
+
+Aplikasi ini dibuat untuk memudahkan para pelanggan ketika memesan kamar hotel dan juga akan meminimalisir menumpuknya antrian. Our Rooms ini memiliki fitur untuk menampilkan tipe kamar dan menampilkan fasilitas berbeda di setiap kamarnya.
+
 # OurRooms App - Fitur Pemesanan
 ## BDD Specs
 
@@ -14,13 +18,13 @@
 
 ### Narrative #1
 
-> Sebagai tamu  
+> Sebagai user  
 > Saya ingin aplikasi otomatis menampilkan daftar kamar  
 > Sehingga saya dapat melihat daftar kamar  
 
 ### Narrative #2
 
-> Sebagai tamu  
+> Sebagai user  
 > Ketika saya memilih kamar dari daftar kamar  
 > Aplikasi akan menampilkan fasilitas lebih detail dari kamar  
 > Sehingga saya bisa mendapatkan informasi dari kamar tersebut  
@@ -35,7 +39,7 @@
 #### Primary course (happy path):
 1. Mengeksekusi perintah "Load Room List" dengan data di atas.
 2. Sistem akan mengurai data dari json.
-3. System mengirim data room list.
+3. Sistem mengirim data room list.
 
 #### Invalid data – error course (sad path):
 1. Sistem menampilkan error.
