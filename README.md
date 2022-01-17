@@ -92,6 +92,68 @@ Aplikasi ini dibuat untuk memudahkan para pelanggan ketika memesan kamar hotel d
 
 ![Polymorphism Diagram](PolymorphismDiagram.jpeg)
 
+## Output
+```
+Silahkan Isi Data Diri Anda
+Masukan NIK: 123
+Masukan Nama: Muhammad
+Silahkan Isi Tanggal Check In (dd/mm/yyyy): 17/01/2022
+Silahkan Isi Tanggal Check out (dd/mm/yyyy): 25/01/2022
+
+DAFTAR KAMAR
+1. Deluxe Double Room
+2. Deluxe Twin Room
+3. Grand Deluxe
+4. Suite Junior
+5. Suite Executive
+Cek fasilitas kamar(1-5): 3
+
+GRAND DELUXE
+	- Ukuran Kamar 27 m^2
+	- Sower dan Bathtub
+	- Akses Executive Lounge
+	- 1 Kasur King size
+	- Air Conditioner
+	- Maks 2 orang (2 anak usia 0 – 5 tahun menginap gratis)
+	- Free Wifi Pribadi
+	- Free Breakfast
+	Harga: Rp980000
+Book(y/n)? y
+
+MENU BREAKFAST
+1. Mixed Vegetables with Peanut Sauce Dressing
+2. Fried chicken with jahanam sauce
+3. Steak with padang spicy sauce
+4. Yellow soup with chicken
+5. Javanese black rice soup with beef
+6. Beef in Soy Sauce
+7. Rice Cooked in Coconut Milk
+8. Crispy salty soy bean,
+Pilih menu: 4
+
+|---------------------- NOTA PEMBAYARAN HOTEL ----------------------|
+NIK	: 123
+Nama	: Muhammad
+Kamar	: Grand Deluxe
+Fasilitas	: 
+	- Ukuran Kamar 27 m^2
+	- Sower dan Bathtub
+	- Akses Executive Lounge
+	- 1 Kasur King size
+	- Air Conditioner
+	- Maks 2 orang (2 anak usia 0 – 5 tahun menginap gratis)
+	- Free Wifi Pribadi
+	- Free Breakfast
+
+Menu Breakfast	: Yellow soup with chicken
+Check in	: Mon, Jan 17 2022
+Check out	: Tue, Jan 25 2022
+Total Pembayaran	: 980000
+|-------------------------------------------------------------------|
+							TERIMA KASIH
+						ATAS KUNJUNGAN ANDA
+```
+
 ## Materi yang digunakan
 - Generics
 - Class
