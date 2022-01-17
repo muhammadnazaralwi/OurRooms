@@ -84,6 +84,10 @@ Aplikasi ini dibuat untuk memudahkan para pelanggan ketika memesan kamar hotel d
 | `id`          | `int`              |
 | `name` | `String`  |
 
+## Flowchart
+
+![Flowchart](Flowchart.jpeg)
+
 ## Materi yang digunakan
 - Generics
 - Class
