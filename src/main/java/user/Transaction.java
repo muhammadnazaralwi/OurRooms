@@ -42,7 +42,7 @@ public class Transaction {
     private StringBuilder stringFacilities() {
         StringBuilder facilities = new StringBuilder();
         for (String facility : room.getFacilities()) {
-            facilities.append("\t- " + facility + "\n");
+            facilities.append("\t- ").append(facility).append("\n");
         }
         return facilities;
     }
