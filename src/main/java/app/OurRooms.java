@@ -84,7 +84,7 @@ public class OurRooms {
             menus = menuLoader.load();
             selectedBreakfast = integerInput.nextInt();
         } else {
-            myMenu = new Menu(0, "-");
+            myMenu = emptyMenu();
             menus = new Menu[]{myMenu};
             selectedBreakfast = 1;
         }
@@ -99,5 +99,9 @@ public class OurRooms {
                 myMenu);
 
         System.out.println(transaction);
+    }
+
+    private static Menu emptyMenu() {
+        return new Menu(0, "-");
     }
 }
