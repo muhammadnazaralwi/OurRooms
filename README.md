@@ -150,8 +150,8 @@ Check in	: Mon, Jan 17 2022
 Check out	: Tue, Jan 25 2022
 Total Pembayaran	: 980000
 |-------------------------------------------------------------------|
-							TERIMA KASIH
-						ATAS KUNJUNGAN ANDA
+			   TERIMA KASIH
+			ATAS KUNJUNGAN ANDA
 ```
 
 ## Materi yang digunakan
