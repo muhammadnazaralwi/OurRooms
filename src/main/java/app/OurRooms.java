@@ -42,8 +42,10 @@ public class OurRooms {
         nin = stringInput.nextLine();
         System.out.print("Masukan Nama: ");
         name = stringInput.nextLine();
+
         user = new User(nin, name);
 
+        System.out.println();
         System.out.print("Silahkan Isi Tanggal Check In (dd/mm/yyyy): ");
         checkIn = stringInput.nextLine();
         System.out.print("Silahkan Isi Tanggal Check out (dd/mm/yyyy): ");
@@ -54,8 +56,10 @@ public class OurRooms {
         while(!isBook) {
             System.out.println("\nDAFTAR KAMAR");
             roomPrinter.show();
+
             System.out.print("Cek fasilitas kamar(1-5)\t: ");
             choose = integerInput.nextInt();
+
             System.out.println();
             roomPrinter.showDetail(choose);
             System.out.print("Book(y/n)? ");
@@ -75,6 +79,7 @@ public class OurRooms {
         if (myRoom.isBreakfast()) {
             System.out.println("\nMENU BREAKFAST");
             menuPrinter.show();
+
             System.out.print("Pilih menu: ");
             menus = menuLoader.load();
             selectedBreakfast = integerInput.nextInt();
