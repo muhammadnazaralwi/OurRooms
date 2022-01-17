@@ -15,7 +15,7 @@ public class MenuPrinter implements Printer {
 
         // For each menu untuk mencetak list menu
         for (Menu menu : menus) {
-            System.out.println(menu.id + ". " + menu.name);
+            System.out.println(menu.getId() + ". " + menu.getName());
         }
     }
 }

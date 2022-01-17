@@ -14,7 +14,7 @@ public class RoomPrinter implements Printer {
 
         // For each menu untuk mencetak list room
         for (Room room : rooms) {
-            System.out.println(room.id + ". " + room.name);
+            System.out.println(room.getId() + ". " + room.getName());
         }
     }
 
@@ -30,14 +30,14 @@ public class RoomPrinter implements Printer {
         int index = id-1;
 
         // Mencetak nama Room dan merubah nama tersebut menjadi kapital
-        System.out.println(rooms[index].name.toUpperCase());
+        System.out.println(rooms[index].getName().toUpperCase());
 
         // Mencetak daftar fasilitas
-        for (String facility : rooms[index].facilities) {
+        for (String facility : rooms[index].getFacilities()) {
             System.out.println("\t- " + facility);
         }
 
         // Mecetak harga
-        System.out.println("\tHarga: Rp" + rooms[index].price);
+        System.out.println("\tHarga: Rp" + rooms[index].getPrice());
     }
 }

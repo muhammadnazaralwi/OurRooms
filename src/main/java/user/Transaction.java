@@ -5,10 +5,10 @@ import room.Room;
 
 // Merupakan representasi dari invoice
 public class Transaction {
-    User user;
-    String checkIn, checkOut;
-    Room room;
-    Menu menu;
+    private final User user;
+    private final String checkIn, checkOut;
+    private final Room room;
+    private final Menu menu;
 
     public Transaction(User user, String checkIn, String checkOut, Room room, Menu menu) {
         this.user = user;
@@ -23,8 +23,8 @@ public class Transaction {
     @Override
     public String toString() {
         return "\n|---------------------- NOTA PEMBAYARAN HOTEL ----------------------|" +
-                "\nNIK\t: " + user.nin +
-                "\nNama\t: " + user.name +
+                "\nNIK\t: " + user.getNin() +
+                "\nNama\t: " + user.getName() +
                 "\nKamar\t: " + room.getName() +
                 "\nFasilitas\t: \n" +
                 stringFacilities() +
