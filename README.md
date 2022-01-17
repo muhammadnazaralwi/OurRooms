@@ -88,6 +88,10 @@ Aplikasi ini dibuat untuk memudahkan para pelanggan ketika memesan kamar hotel d
 
 ![Flowchart](Flowchart.jpeg)
 
+## Polymorphism Diagram
+
+![Polymorphism Diagram](PolymorphismDiagram.jpeg)
+
 ## Materi yang digunakan
 - Generics
 - Class
