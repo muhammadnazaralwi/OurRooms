@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" />
-    <img src="https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white" />
+    <img src="https://img.shields.io/badge/OpenJDK-15.0.5-blue.svg" />
+    <img src="https://img.shields.io/badge/IntelliJ%20IDEA-2020.2.3-blue.svg" />
 </p>
 
 # OurRooms App - Fitur Pemesanan
