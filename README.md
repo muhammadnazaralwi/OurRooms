@@ -59,6 +59,31 @@ Aplikasi ini dibuat untuk memudahkan para pelanggan ketika memesan kamar hotel d
 | `price`    | `int` |
 | `breakfast`    | `boolean`  |
 
+### Menu List Use Case
+
+#### Data:
+- JSON
+
+#### Primary course (happy path):
+1. Mengeksekusi perintah "Load Menu List" dengan data di atas.
+2. Sistem akan mengurai data dari json.
+3. System mengirim data Menu list.
+
+#### Invalid data – error course (sad path):
+1. Sistem menampilkan error.
+
+#### No connectivity – error course (sad path):
+1. Sistem menampilkan error.
+
+## Model Specs
+
+### Menu
+
+| Property      | Type                |
+|---------------|---------------------|
+| `id`          | `int`              |
+| `name` | `String`  |
+
 ## Materi yang digunakan
 - Generics
 - Class
