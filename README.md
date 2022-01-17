@@ -2,6 +2,11 @@
     <img src="Logo.png" width="400" max-width="90%" alt="OurRooms" />
 </p>
 
+<p align="center">
+    <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" />
+    <img src="https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white" />
+</p>
+
 # OurRooms App - Fitur Pemesanan
 ## BDD Specs
 
